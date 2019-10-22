@@ -23,19 +23,66 @@ $(function(){
 /* ----------------------
 		Progress Bar
 -------------------------*/
-$(function(){
+	$(function(){
 
-	$("#progress-elements").waypoint(function(){
+		$("#progress-elements").waypoint(function(){
 
-		$(".progress-bar").each(function(){
-			$(this).animate({
-				width: $(this).attr("aria-valuenow") + "%"
-			}, 1000);
-		});
-		this.destroy();
+			$(".progress-bar").each(function(){
+				$(this).animate({
+					width: $(this).attr("aria-valuenow") + "%"
+				}, 1000);
+			});
+			this.destroy();
 
-	}, {offset: "bottom-in-view"
+		}, {offset: "bottom-in-view"});
 	});
 
+/*------------------------------
+		Responsive tabs
+------------------------------*/
+	$(function(){
+		$("#services-tabs").responsiveTabs({
+			animation: 'slide'
+		});
+	});
+/*------------------------------
+		Portfolio filer
+------------------------------*/
+	$(window).on("load", function(){
+		$("#isotope-container").isotope({
+		}) ;
+		//filter item on button click
+		$("#isotope-filters").on("click", "button", function(){
+			//get filter value
+			var filterValue = $(this).attr('data-filter');
+			//filter portfolio
+			$("#isotope-container").isotope({
+				filter: filterValue
+			});
+			// active button
+			$("isotope-filters").find(".active").removeClass('active');
+			$(this).addClass("active");
+		});
+	});
+/*------------------------------
+		Magnify
+------------------------------*/
+	$(function(){
+		$("#portfolio-wrapper").magnificPopup({
+			delegate: 'a', //child items selector, by clicking on it popup will open
+			type: 'image',
+			gallery: {
+			  enabled: true, // set to true to enable gallery
 
-});
+			  preload: [0,2], // read about this option in next Lazy-loading section
+
+			  navigateByImgClick: true,
+
+			  arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+			  tPrev: 'Previous (Left arrow key)', // title for left button
+			  tNext: 'Next (Right arrow key)', // title for right button
+			  tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+			}
+		});
+	});
