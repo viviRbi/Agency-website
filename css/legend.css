@@ -73,7 +73,7 @@
 			-moz-transform: translateX(-50%) translateY(-50%);
 			transform: translateX(-50%) translateY(-50%);
 			min-width: 100%;
-			max-width: 100%;
+			min-height: 100%;
 			width: auto;
 			height: auto;
 			z-index: -1;
@@ -966,9 +966,9 @@
 		ul.office-details li{
 			font-family: "Open Sans", sans-serif;
 			margin-top: 12px;
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex; /*align the layout of children (so line 2 of Address do NOT align with icon) */
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex; /*align the layout of children (so line 2 of Address do NOT align with icon) */
 		}
 		ul.office-details li i{
 			font-size: 20px;

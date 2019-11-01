@@ -1,0 +1,108 @@
+/* #################################################
+		    Bootstrap 3 Media Queries
+####################################################*/
+
+/* Large (Destop& Laptop) */
+@media (min-width: 1200px)and (max-width: 1299px){
+	.site-nav-wrapper{
+		padding: 0 20px;
+	}
+}
+
+/* Medium (Landscape Tablet & Medium Laptop) */
+@media (min-width: 992px) and (max-width: 1199px){
+	.site-nav-wrapper{
+		padding: 0;
+	}
+	.vertical-heading h2{
+		font-size: 29px;
+	}
+	#services-tabs .tab-bg{
+		padding: 16px 30px;
+		min-height: 300px;
+	}
+	.service-tab p{
+		line-height: 300px;
+	}
+}
+
+/* Medium ( Portrait Tablet Tablet & Small Destop) */
+@media (min-width: 768px) and (max-width: 991px){
+	/* Nav */
+	.site-nav-wrapper{
+		padding: 0;
+	}
+	/* Home */
+	#home-heading h1{
+		font-size: 41px;
+	}
+	#home-text p{
+		font-size: 13px;
+	}
+	/*Generic*/
+	.btn-general{
+		padding: 8px 35px 8px 35px;
+		font-size: 10px;
+	}
+	.vertical-heading h2{
+		font-size: 29px;
+	}
+
+	/*Tech statement*/
+	#tech-statement h3{
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	/*Service*/
+	.r-tabs-accordion-title{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.r-tabs-accordion-title a{
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		color: #212226;
+		text-transform: uppercase;
+		font-weight: 400;
+		padding: 0;
+		text-decoration: none;
+	}
+	.r-tabs-accordion-title.r-tabs-state-active a{
+		color: #f4c613;
+		font-weight: 700;
+		border-bottom: 3px solid #f4c613;
+		padding-bottom: 5px;
+		-webkit-transition: border-color 300ms linear;
+		-moz-transition: border-color 300ms linear;
+		transition: border-color 300ms linear;
+	}
+	/*Pricing*/
+	.pricing-table .price h2{
+		margin: 0 0 0 20px;
+		font-size: 35px;
+	}
+	.pricing-table .price{
+		padding: 24px 0 45px 0;
+	}
+	/*Stats*/
+	.stats-item p{
+		line-height: 18px;
+	}
+	/*Blog*/
+	.blog-post .post-meta p{
+		line-height: : 14px;
+	}
+	/*Contact*/
+	ul.office-details li{
+		margin-right: 15px;
+	}
+	ul.office-details li i{
+		width: 25px;
+	}
+}
+
+/* Extra Small (Landscape phone & Portrait Tablet) */
+@media (min-width: 767px){
+	
+}

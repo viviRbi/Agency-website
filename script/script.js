@@ -17,7 +17,17 @@ $(function(){
 		loop: true,
 		autoplayHoverPause: true,
 		nav: true,
-		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
+		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		responsive: {
+			//break point from 0 up
+			0: {
+				items: 1
+			},
+			//break point from 480 up
+			480: {
+				items: 2
+			}
+		}
 	});
 });
 /* ----------------------
