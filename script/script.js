@@ -133,7 +133,21 @@ $ (function(){
 			autoplayHoverPause: true,
 			nav: true,
 			dots: false,
-			navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>']
+			navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+			responsive: {
+			//break point from 0 up
+			0: {
+				items: 2
+			},
+			//break point from 480 up
+			480: {
+				items: 3
+			},
+			//break point from 480 up
+			768: {
+				items: 6
+			}
+		}
 		});
 	});
 /*-------------------------

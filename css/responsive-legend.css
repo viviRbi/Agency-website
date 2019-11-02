@@ -103,6 +103,245 @@
 }
 
 /* Extra Small (Landscape phone & Portrait Tablet) */
-@media (min-width: 767px){
-	
+@media (max-width: 767px){
+
+	#home-heading h1 {
+		font-size: 22px;
+	}
+	#home-text p{
+		font-size: 13px;
+		line-height: 18px;
+		margin: 8px 2px 30px 2px;
+	}
+	/*Generic*/
+	.btn-general{
+		padding: 8px 25px 6px 25px;
+		font-size: 10px;
+	}
+
+	/*About 01*/
+	.content-box-lg{
+		padding: 90px 0;
+	}
+
+	/*Vertical-heading*/
+	.vertical-heading{
+		text-align: center;
+	}
+	.vertical-heading h5{
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		display: block;
+		position: static;
+		margin-bottom: 15px;
+	}
+	.vertical-heading h2{
+		font-size: 29px;
+		line-height: normal;
+		margin: 0;
+	}
+	#about-left{
+		margin-bottom: 50px;
+	}
+	#about-right{
+		text-align: center;
+	}
+	/*About 02*/
+	.content-box-md{
+		padding: 80px 0;
+	}
+	.about-item{
+		padding: 55px 30px;
+		margin-bottom: 35px;
+		background-color: grey;
+	}
+	.about-item i{
+		font-size: 30px;
+	}
+	.about-item h3{
+		font-size: 18px;
+	}
+	/*Team*/
+	#team-left.vertical-heading{
+		min-height: 130px;
+	}
+	.skill h4{
+		font-size: 14px;
+		line-height: 35px;
+	}
+	/*Tech Statement*/
+	#tech-statement h3{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	/*Service 01*/
+	.horizontal-heading{
+		margin-bottom: 40px;
+	}
+	.horizontal-heading h2{
+		font-size: 30px;
+	}
+	#service-01 img{
+		margin: 35px 0;
+	}
+	.service, .service .icon{
+		text-align: center;
+	}
+	.service h4{
+		font-size: 18px;
+	}
+	/*Service*/
+	.r-tabs-accordion-title{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.r-tabs-accordion-title a{
+		font-family: "Raleway", sans-serif;
+		font-size: 13px;
+		color: #212226;
+		text-transform: uppercase;
+		font-weight: 400;
+		padding: 0;
+		text-decoration: none;
+	}
+	.r-tabs-accordion-title.r-tabs-state-active a{
+		color: #f4c613;
+		font-weight: 700;
+		border-bottom: 3px solid #f4c613;
+		padding-bottom: 5px;
+		-webkit-transition: border-color 300ms linear;
+		-moz-transition: border-color 300ms linear;
+		transition: border-color 300ms linear;
+	}
+	#services-tabs .tab-bg{
+		text-align: center;
+		padding: 40px 30px;
+	}
+	#services-tabs h2{
+		font-size: 40px;
+	}
+	#services-tab h3{
+		font-size: 28px;
+	}
+	/*Portfolio*/
+	#portfolio{
+		padding-bottom: 0;
+	}
+	#isotope-filters button{
+		padding-right: 15px;
+	}
+	/*Testimonials*/
+	#testimonials{
+		top: 0;
+	}
+	#testimonial-slider{
+		top: 0;
+	}
+	#testimonials .vertical-heading{
+		padding: 0;
+	}
+	.testimonial h3{
+		font-size: 20px;
+	}
+	.testimonial.stars{
+		font-size: 16px;
+	}
+	.author img{
+		width: 80px !important;
+	}
+	/*Pricing*/
+	.pricing-table{
+		margin-bottom: 30px;
+	}
+	.pricing-table .pricing h2{
+		font-size: 28px;
+		margin: 0 0 0 16px;
+	}
+	/*Stats*/
+	.stats-item{
+		margin-bottom: 20px;
+		padding: 25px 5px;
+	}
+	.stats-item i{
+		font-size: 30px;
+	}
+	.stats-item h3{
+		font-size: 24px;
+	}
+	/*Blog*/
+	#blog-left{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.blog-post{
+		margin-bottom: 25px;
+	}
+	/*Contact*/
+	#contact-left{
+		text-align: center;
+	}
+	.office{
+		margin-bottom: 40px;
+	}
+	ul.office-details li{
+		display: block;
+		margin-top: 25px;
+	}
+	ul.office-details li i{
+		width: auto;
+		display: block;
+		margin-bottom: 3px;
+	}
+	ul.social-list{
+		margin-bottom: 40px;
+	}
+}
+/* Extra Small (Portrait phone & smaller devices */
+@media (max-width: 480px){
+	#home-heading h1 {
+		font-size: 18px;
+	}
+	#home-text p{
+		font-size: 11px;
+		line-height: 16px;
+		margin: 8px 10px 25px 10px;
+	}
+
+	/*Generic*/
+	.vertical-heading h2{
+		font-size: 22px;
+	}
+
+	/*Portfolio*/
+	#isotope-filters{
+		text-align: center;
+	}
+	#isotope-filters button{
+		font-size: 10px;
+		padding-right: 14px;
+	}
+
+	/*Testimonials*/
+	.testimonial h3{
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.testimonial .stars{
+		font-size: 13px;
+	}
+}
+/* Extra Small (Portrait phone & smaller devices */
+@media (max-width: 320px){
+
+	/*Testimonials*/
+	.testimonial h3{
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.testimonial .stars{
+		font-size: 8px;
+		position: relative;
+		top: 17px;
+	}
 }
