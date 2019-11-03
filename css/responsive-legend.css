@@ -1,6 +1,81 @@
 /* #################################################
 		    Bootstrap 3 Media Queries
 ####################################################*/
+/*-------------------------
+		Mobile Menu
+--------------------------*/
+	.navbar-header{
+		position: relative;
+	}
+	#mobile-nav-open-btn{
+		font-size: 30px;
+		color: #f4c613;
+		cursor: pointer;
+		z-index: 2;
+		position: absolute;
+		right: 0;
+		top: 6px;
+		/*Hide*/
+		display: none;
+	}
+	#mobile-nav{
+		/*Hide the menu list*/
+		height: 0%;
+		/*Done*/
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background-color: rgba(255,255,255,.9);
+		-webkit-transition: all 300ms linear;
+		-moz-transition: all 300ms linear;
+		transition: all 300ms linear;
+		overflow-y: hidden;
+	}
+	#mobile-nav-close-btn{
+		font-family: "Raleway", sans-serif;
+		font-size: 70px;
+		color: #212226;
+		font-weight: 400;
+		cursor: pointer;
+		position: absolute;
+		top: -9px;
+		right: 13px;
+		-webkit-transition: .3s;
+		transition: .3s;
+	}
+	#mobile-nav-content{
+		text-align: center;
+		width: 100%;
+		margin-top: 30px;
+		position: relative;
+		top: 10%;
+	}
+	#mobile-nav ul li{
+		margin-bottom: 20px;
+	}
+	#mobile-nav a{
+		font-family: "Raleway", sans-serif;
+		font-size: 18px;
+		color: #212226;
+		font-weight: 400;
+		text-transform: uppercase;
+		display: inline;
+		-webkit-transition: .3s;
+		-moz-transition: .3s;
+		transition: .3s;
+	}
+	#mobile-nav a:hover,#mobile-nav a:focus, #mobile-nav-close-btn:hover, #mobile-nav-close-btn:focus{
+		color: #f4c613;
+		background: none;
+	}
+	/* Scroll spy active state */
+	.white-nav-top #mobile-nav ul.nav>li.active>a{
+		color: #f4c613;
+		font-weight: 500;
+	}
+
 
 /* Large (Destop& Laptop) */
 @media (min-width: 1200px)and (max-width: 1299px){
@@ -91,7 +166,7 @@
 	}
 	/*Blog*/
 	.blog-post .post-meta p{
-		line-height: : 14px;
+		line-height: 14px;
 	}
 	/*Contact*/
 	ul.office-details li{
@@ -105,6 +180,17 @@
 /* Extra Small (Landscape phone & Portrait Tablet) */
 @media (max-width: 767px){
 
+	/*Nav*/
+	.navbar{
+		padding: 20px 0;
+	}
+	.site-nav-wrapper,.white-nav-top{
+		padding: 0;
+	}
+	#mobile-nav-open-btn{
+		display: block;
+	}
+	/*Home*/
 	#home-heading h1 {
 		font-size: 22px;
 	}
@@ -297,7 +383,7 @@
 		margin-bottom: 40px;
 	}
 }
-/* Extra Small (Portrait phone & smaller devices */
+/* Extra Small (Portrait phone & smaller devices) */
 @media (max-width: 480px){
 	#home-heading h1 {
 		font-size: 18px;

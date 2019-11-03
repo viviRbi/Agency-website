@@ -40,7 +40,7 @@ $(function(){
 			$(".progress-bar").each(function(){
 				$(this).animate({
 					width: $(this).attr("aria-valuenow") + "%"
-				}, 1000);
+				}, 2000);
 			});
 			this.destroy();
 
@@ -168,13 +168,21 @@ $ (function(){
 			position: myLatlng,
 			map: map,
 			title: "Click To See Address"
-		})
+		});
 		//3.Info window
 		var infowindow = new google.maps.InfoWindow({
 			content: addressString
 		});
 		marker.addListener('click', function(){
 			infowindow.open(map, marker);
+		});
+	
+
+		// 4. resize, center marker
+		google.maps.event.addDomListener(window, 'resize', function(){
+			var center = map.getCenter();
+			google.maps.event.trigger(map, 'resize');
+			map.setCenter(center);
 		});
 	});
 /*-------------------------
@@ -233,4 +241,27 @@ jQuery.extend( jQuery.easing,
 		if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
 		return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
 	}	
+});
+
+$(function(){
+	// Show mobile nav
+	$('#mobile-nav-open-btn').click(function(){
+		$('#mobile-nav').css('height','100%');
+	});
+	//Hide mobile nav when click X or 1 of the button
+	$('#mobile-nav-close-btn, #mobile-nav a').click(function(){
+		$('#mobile-nav').css('height','0');
+	});
+});
+
+$(function(){
+	new WOW().init();
+});
+
+$(window).on('load', function(){
+	$('#home-heading-1').addClass('animated fadeInDown');
+	$('#home-heading-2').addClass('animated fadeInLeft');
+	$('#home-text').addClass('animated zoomIn');
+	$('#home-btn').addClass('animated zoomIn');
+	$('#arrow-down i').addClass('animated fadeInDown infinite');
 });
